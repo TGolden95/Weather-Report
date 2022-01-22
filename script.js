@@ -13,7 +13,7 @@ dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
 function renderSearchHistory() {
-  searchHistory.innerHTML = "";
+  searchHistoryContainer.innerHTML = "";
 
   for (var i = searchHistory.length - 1; i >= 0; i--) {
     var btn = document.createElement("button");
@@ -104,7 +104,6 @@ function renderCurrentWeather(city, weather, timezone) {
 }
 
 function renderForecastCard(forecast, timezone) {
-  // variables for data from api
   var unixTs = forecast.dt;
   var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
   var iconDescription = forecast.weather[0].description;
@@ -146,7 +145,6 @@ function renderForecastCard(forecast, timezone) {
 
 // Shows Five Day forecsat
 function renderForecast(dailyForecast, timezone) {
-  // Create unix timestamps for start and end of 5 day forecast
   var startDt = dayjs().tz(timezone).add(1, "day").startOf("day").unix();
   var endDt = dayjs().tz(timezone).add(6, "day").startOf("day").unix();
 
@@ -220,14 +218,14 @@ function handleSearchHistoryClick(e) {
 }
 
 function handleSearchFormSubmit(e) {
-  if (!searchInput.value) {
+  if (!inputElement.value) {
     return;
   }
 
   e.preventDefault();
-  var search = searchInput.value.trim();
+  var search = inputElement.value.trim();
   fetchCoords(search);
-  searchInput.value = "";
+  inputElement.value = "";
 }
 
 initSearchHistory();
