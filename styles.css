@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+  padding: 10px;
+}
+
+header {
+  background-color: orange;
+  color: white;
+  display: block;
+}
+
+h2 {
+  margin: 2%;
+}
+
+input,
+select,
+textarea,
+button {
+  margin: 0;
+}
+
+input {
+  overflow: visible;
+  display: block;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+form .form-input {
+  width: 100%;
+  padding: 3%;
+  color: black;
+  background-color: #ffffff;
+  margin: 3%;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.search-button {
+  margin: 3%;
+  padding: 2%;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+.column-1 {
+  float: left;
+  width: 20%;
+}
+
+.column-2 {
+  float: right;
+  width: 80%;
+}
+
+#top-section {
+  border: 1px solid black;
+  margin: 2%;
+  padding: 1%;
+}
+
+.column {
+  margin: 2%;
+  padding: 1%;
+  float: left;
+  background-color: lightblue;
+  width: 15%;
+  text-align: left;
+}
+
+.weather-hr {
+  margin: 4%;
+  width: 100%;
+}
